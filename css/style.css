@@ -1,0 +1,190 @@
+/*start utility class*/
+:root{
+    --dark-purple: #28104E;
+    --primary-purple: #6237A0;
+    --second-purple: #9754CB;
+    --light-purple: #DEACF5;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-purple);
+    box-sizing: border-box;
+}
+/*end utility class*/
+
+/*start calender*/
+#calender{
+    background-color: #fff;
+    width: 800px;
+    height: 500px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; */
+        /*centre the middle of screen*/
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*for enhancing the view*/
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.calender-wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+}
+
+.calender-info-wrapper{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calender-bg-container{
+    background-color: var(--primary-purple);
+    height: 50%;
+    background-image: url("../img/calender-bg.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+    position: relative;
+}
+
+.calender-bg-container .layer-bg{
+    background-color: rgba(40, 16, 78, 0.50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.calender-info{
+    background-color: var(--second-purple);
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calender-info .time{
+    font-size: 50px;
+    color: var(--primary-purple);
+}
+
+.calender-info .date{
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--primary-purple);
+    font-weight: 600;
+}
+
+.calender-content-wrapper{
+    /* background-color: var(--light-purple); */
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calender-content{
+    /* background-color: yellow; */
+    height: 60%;
+    width: 100%;
+}
+
+.calender-content nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calender-content nav a{
+    cursor: pointer;
+}
+
+.calender-content nav a i{
+    color: var(--dark-purple);
+    font-size: 24px;
+}
+
+.calender-content nav .month-year-title{
+    font-size: 22px;
+    margin-right: 14px;
+    margin-left: 14px;
+    font-weight: 400;
+    color: var(--primary-purple);
+    min-width: 180px;
+    text-align: center;
+}
+
+.calender-content .week-days{
+    
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 2px;
+    row-gap: 2px;
+    text-align: center;
+    margin-top: 50px;
+    color: var(--primary-purple);
+    font-weight: 700;
+}
+
+.calender-content .days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 2px;
+    row-gap: 2px;
+    text-align: center;
+    margin-top: 18px;
+    color: var(--dark-purple);
+    font-weight: 700;
+}
+
+.calender-content .days > div{
+    background-color: rgba(222, 172, 245, 0.70);
+    padding: 8px;
+    border: 2px solid rgba(222, 172, 245, 0.70);
+    cursor: pointer;
+}
+
+.calender-content .days > div:hover{
+    border: 2px solid var(--primary-purple);
+}
+
+.calender-content .days  div.today{
+    background-color: var(--second-purple);
+    border: 2px solid var(--second-purple);
+}
+
+.calender-content .days  div.next-month-day,.calender-content .days  div.prev-month-day{
+    color: lightgrey;
+    background-color: rgba(222, 172, 245, 0.20);
+}
+/*end calender*/
+
+
+/*start responsive 840px*/
+
+
+/* @media (max-width: 840px) 
+{
+    .calender-wrapper {
+        flex-direction: column-reverse;
+    }
+    .calender-info-wrapper, .calender-content-wrapper {
+        width: 100%;
+    }
+} */
+/*end responsive*/
